@@ -1,0 +1,157 @@
+:root{
+    --lightblue : #168b68;
+    --gray: #494e47;
+    --backg:#6b8d71a4;
+    --primarytext: #181205;
+}
+
+*{
+    box-sizing: border-box;
+    position: center;
+    margin: 0;
+    font-family: 'Times New Roman';
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(https://media.istockphoto.com/id/1271863211/photo/note-pad-and-pencil.jpg?s=612x612&w=0&k=20&c=_42WbNfiRunbOtXUhmjfcmVd6ieMCM-REGGXdP_2A18=);
+    background-position: flex;
+    background-size: cover;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+header h1{
+    font-family: monospace;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primarytext);
+    margin-bottom: 1.5rem;
+}
+#task-form{
+    display: flex;
+}
+
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: var(--backg);
+}
+
+#task-input{
+    flex: 110%;
+    background-color: var(--backg);
+    padding: 1rem;
+    border: 3px solid var(--primarytext);
+    border-radius: 3rem;
+    margin-right: 3rem;
+    color: var(--primarytext);
+    font-size: 1.25rem;
+}
+#task-input::placeholder{
+    color: var(--primarytext);
+    text-align: center;
+}
+#task-submit{
+    color: var(--primarytext);
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 3px solid var(--primarytext);
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+
+#task-submit:hover{
+    opacity: 0.8;
+}
+
+#task-submit:active{
+    opacity: 0;
+}
+.container{
+    background: var(--backg);
+    flex: 0% 1 0%;
+    max-width: 750px;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    text-align: center;
+}
+main{
+    flex: 1 1 0%;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backg);
+    border: 2px solid var(--gray);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#tasks .task .content{
+    flex: 110%;
+}
+#tasks .task .content .text{
+    color: var(--primarytext);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-family: cursive;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#tasks .task .content .text:not(:read-only){
+    color: var(--primarytext);
+}
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+
+.task .actions button:active{
+    opacity: 0.6;
+}
+.task .actions .Edit{
+    color: var(--backg);
+}
+.task .actions .Delete{
+    color: crimson;
+}
+.task .actions .Completed{
+    color: var(--gray)
+}
+
+.strike {
+    text-decoration: line-through;
+}
